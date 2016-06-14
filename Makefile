@@ -1,6 +1,6 @@
 CPPFLAGS=-Wall -DNDEBUG -g2 -I$(HELIB)#-O3
 LIBS=$(HELIB)/fhe.a -lntl -lgmp -lm
-TARGET=simpleOperations
+TARGET=simpleSum
 
 .PHONY: all clean
 
