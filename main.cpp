@@ -46,7 +46,7 @@ int main(int argc, char **argv)
 	Ctxt ctSum = ctx1;                   // Create a ciphertext to hold the sum and initialize it with Enc(2)
 	ctSum += ctx2;                       // Perform Enc(2) + Enc(3)
 
-	ZZX ptSum = to_ZZX(10);              //	Create a plaintext to hold the plaintext of the sum
+	ZZX ptSum;                           //	Create a plaintext to hold the plaintext of the sum
 	secretKey.Decrypt(ptSum, ctSum);	 // Decrypt the ciphertext ctSum into the plaintext ptSum using secretKey
 
 	std::cout << "2 + 3 = " << ptSum[0] << std::endl;
