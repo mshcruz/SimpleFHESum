@@ -1,4 +1,4 @@
-CPPFLAGS=-Wall -DNDEBUG -g2 -I$(HELIB)#-O3
+CPPFLAGS=-Wall -DNDEBUG -g2 -I$(HELIB)
 LIBS=$(HELIB)/fhe.a -lntl -lgmp -lm
 TARGET=simpleSum
 
