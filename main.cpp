@@ -1,7 +1,4 @@
 #include "FHE.h"
-#include "EncryptedArray.h"
-#include <NTL/lzz_pXFactoring.h>
-
 
 int main(int argc, char **argv)
 {
