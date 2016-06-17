@@ -12,10 +12,9 @@ int main(int argc, char **argv)
 	long d = 0;                   // Degree of the field extension [default=1]
 	long k = 128;                 // Security parameter [default=80] 
     long s = 0;                   // Minimum number of slots [default=0]
-    ZZX G;                        // Polynomial
 
 	std::cout << "Finding m... " << std::flush;
-	m = FindM(k,L,c,p, d, s, 0);                            // Find a value for m given the specified values
+	m = FindM(k, L, c, p, d, s, 0);                            // Find a value for m given the specified values
 	std::cout << "m = " << m << std::endl;
 	
 	std::cout << "Initializing context... " << std::flush;
@@ -24,7 +23,7 @@ int main(int argc, char **argv)
 	std::cout << "OK!" << std::endl;
 
 	std::cout << "Creating polynomial... " << std::flush;
-	G = context.alMod.getFactorsOverZZ()[0];                // Creates the polynomial used to encrypt the data
+	ZZX G =  context.alMod.getFactorsOverZZ()[0];                // Creates the polynomial used to encrypt the data
 	std::cout << "OK!" << std::endl;
 
 	std::cout << "Generating keys... " << std::flush;
